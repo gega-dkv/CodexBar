@@ -503,6 +503,7 @@ extension StatusItemController {
         let rows: [(provider: UsageProvider, model: UsageMenuCardView.Model)] = overviewProviders
             .compactMap { provider in
                 guard let model = self.menuCardModel(for: provider) else { return nil }
+                guard !model.isOverviewErrorOnly else { return nil }
                 return (provider: provider, model: model)
             }
         guard !rows.isEmpty else { return false }

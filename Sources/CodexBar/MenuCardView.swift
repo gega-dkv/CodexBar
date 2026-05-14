@@ -767,10 +767,10 @@ extension UsageMenuCardView.Model {
         let subtitle = Self.subtitle(
             snapshot: input.snapshot,
             isRefreshing: input.isRefreshing,
-            lastError: input.lastError,
+            lastError: Self.lastError(input: input),
             now: input.now)
         let redacted = Self.redactedText(input: input, subtitle: subtitle)
-        let placeholder = input.snapshot == nil && !input.isRefreshing && input.lastError == nil ? "No usage yet" : nil
+        let placeholder = Self.placeholder(input: input)
 
         return UsageMenuCardView.Model(
             provider: input.provider,
