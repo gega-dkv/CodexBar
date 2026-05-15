@@ -8,6 +8,7 @@
 ### Fixed
 - Claude: keep the last successful usage card visible when a transient probe timeout happens instead of replacing it with a red timeout error.
 - Claude: show Enterprise spend-limit usage in automatic menu bar metrics and expose the Extra usage metric picker when spend data is available (#964).
+- Ollama: let automatic session import fall back from Chrome to Safari, Comet, and the rest of the browser import order when Chrome has no Ollama session (#962).
 
 ## 0.26.1 — 2026-05-15
 
