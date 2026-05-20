@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.27.1 — Unreleased
+## 0.28.0 — Unreleased
 
 ### Added
 - Azure OpenAI: add deployment-status validation via API key, endpoint, and deployment settings (#1045). Thanks @ZenoRewn!
