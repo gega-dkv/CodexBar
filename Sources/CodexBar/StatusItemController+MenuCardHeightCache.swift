@@ -5,20 +5,21 @@ extension StatusItemController {
         let id: String
         let scope: String
         let width: Int
-        let version: Int
+        let fingerprint: String
     }
 
     func cachedMenuCardHeight(
         for id: String,
         scope: String,
         width: CGFloat,
+        fingerprint: String? = nil,
         measure: () -> CGFloat) -> CGFloat
     {
         let key = MenuCardHeightCacheKey(
             id: id,
             scope: scope,
             width: Int((width * 100).rounded()),
-            version: self.menuContentVersion)
+            fingerprint: fingerprint ?? "version:\(self.menuContentVersion)")
         if let cached = self.menuCardHeightCache[key] {
             return cached
         }

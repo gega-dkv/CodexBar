@@ -32,7 +32,6 @@ extension StatusItemController {
         guard !self.isReleasedForTesting else { return }
         #endif
         self.menuContentVersion &+= 1
-        self.menuCardHeightCache.removeAll(keepingCapacity: true)
         if !allowStaleContentDuringDataRefresh {
             self.latestRequiredMenuRebuildVersion = self.menuContentVersion
         }
